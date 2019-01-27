@@ -10,7 +10,7 @@
 	<title>Vito Rizki Imanda - MWS</title>
 	
 	<link rel="manifest" href="manifest.json">
-	<link rel="shortcut icon" href="/image/me.jpg">
+	<link rel="shortcut icon" href="me.jpg">
 
 
 	<style type="text/css">
@@ -39,7 +39,7 @@
 		  	box-shadow: 0 2px 5px grey;
 			border-radius: 10px;
 			transition: all 1s;
-			text-align: center;
+
 		}
 
 		.menu:hover {
@@ -175,10 +175,10 @@
 	<main>
 	<div class="container">
 		<div class="menu">
-			<div class="logo-menu"><img id="menu" src="image/me.jpg" alt="me"></div>
+			<div class="logo-menu"><img id="menu" src="me.jpg" alt="me"></div>
 		</div>
 		<div class="sidebar">
-			<div class="profile-photo"><img id="sidebar_pic" src="image/me.jpg" alt="me"></div>
+			<div class="profile-photo"><img id="sidebar_pic" src="me.jpg" alt="me"></div>
 		</div>
 		<div class="konten" id="link1"><a id="link link-project1" href="sum/index.html"><center>Menjumlahkan Dua Angka</center></a></div>
 		<div class="konten" id="link2"><a id="link link-project2" href="map/index.html"><center>Lokasi Istimewa dengan MapBox</center></a></div>
@@ -218,17 +218,10 @@
 		linkproject2.addEventListener('click',function(){
 			window.location.href=url2;
 		});
-		(function () {
-			if ('serviceWorker' in navigator) {
-				navigator.serviceWorker.register('/serviceWorker.js', {
-						scope: './'
-					})
-					.then(() => console.log('Service Worker Registered'))
-					.catch((error) => console.log('Registration Failed', error))
-			} else {
-				console.log('Service worker are not supported.')
-			}
-		})()
+	// window.addEventListener('beforeinstallprompt',(e)=>{
+	// 		e.prompt();
+			
+	// });
 	</script>
 
 
